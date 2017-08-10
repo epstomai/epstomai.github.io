@@ -23,9 +23,9 @@
 
   <body>
     {% if site.data.theme.color == "default" %}
-    <div class="navbar navbar-default navbar-static-top screen tablet mobile only">
+    <div id="top-navbar" class="navbar navbar-default navbar-static-top hidden">
       {% else %}
-      <div class="navbar navbar-inverse navbar-static-top">
+      <div id="top-navbar" class="navbar navbar-inverse navbar-static-top hidden">
         {% endif %}
         <div class="container">
           <div class="navbar-header">
@@ -57,12 +57,10 @@
             {% include sidebar.html %}
           </div>
           <div id="primary" class="col-sm-9">
-            {{ content }}
-            <div class="row footer">
-              <div class="col-sm-12 text-center">
+              {{ content }}
+              <div class="col-sm-12 footer text-center">
                 {% include footer.html %}
               </div>
-            </div>
           </div>
           {% endif %}
         </div>

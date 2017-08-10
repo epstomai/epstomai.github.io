@@ -169,19 +169,22 @@ padding: 15px;
 }
 
 .previous-post {
-	color: #fff !important;
 	background-color: #717577 !important;
 	padding: 30px 90px;
 }
-
-.next-post {
+.post-title-link{
 	color: #fff !important;
+	font-size: 34px;
+}
+.next-post {
 	background-color: #4D4A4A !important;
 	padding: 30px 90px;
 }
 
 .meta-nav{
 	color: rgba(255,255,255,0.5);
+	margin-top: 0px !important;
+	margin-bottom: 5px;
 }
 
 
@@ -244,3 +247,22 @@ padding: 15px;
     display: none !important;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  #secondary {
+    display: none !important;
+  }
+  #top-navbar{
+  	display: block !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  #secondary {
+    display: block !important;
+  }
+  #top-navbar{
+  	display: none !important;
+  }
+}
+
