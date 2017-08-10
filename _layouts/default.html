@@ -23,7 +23,7 @@
 
   <body>
     {% if site.data.theme.color == "default" %}
-    <div class="navbar navbar-default navbar-static-top">
+    <div class="navbar navbar-default navbar-static-top screen tablet mobile only">
       {% else %}
       <div class="navbar navbar-inverse navbar-static-top">
         {% endif %}
@@ -42,12 +42,10 @@
             <ul class="navbar-nav nav" data-purplecoat="shiori" data-purplecoat-label="nav.html">
               {% include nav.html %}
             </ul>
-            <!--<ul class="navbar-nav nav navbar-right" data-purplecoat="shiori" data-purplecoat-label="nav-right.html">
-            {% include nav-right.html %}
-          </ul>-->
           </div>
         </div>
       </div>
+      
       <div class="container">
         <div class="row">
           {% if page.hide_sidebar or site.data.theme.hide_sidebar %}

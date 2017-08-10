@@ -17,7 +17,7 @@ layout: default
 {% if site.data.theme.show_post_navs %}
   {% if page.previous or page.next %}
       {% if page.previous %}
-        <div class="col-md-12">
+        <div class="col-md-12 previous-post">
           <h3 class="meta-nav">
             上一
           </h3>
@@ -26,7 +26,7 @@ layout: default
       {% endif %}
     
       {% if page.next %}
-        <div class="col-md-12">
+        <div class="col-md-12 next-post">
           <h3 class="meta-nav">
             继续
           </h3>
