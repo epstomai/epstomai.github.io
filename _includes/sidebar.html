@@ -26,24 +26,26 @@
           <input type="submit" class="submit" name="submit" id="searchsubmit" value="搜索">
         </form>
       </aside>-->
-      <aside id="masthead" class="widget">
+      <aside id="masthead" class="widget hgroup">
         <h1 class="site-title display-title"><a href="https://epstomai.github.io/" title="广重36号" rel="home"><span itemprop="name">广重36号</span></a></h1>
         <h2 itemprop="description" class="site-description">窗外的风景色</h2>
       </aside>
-      <aside id="site-navigation" class="widget">
+      <aside id="site-navigation" class="widget hgroup">
         <ul id="menu-%e9%80%89%e9%a1%b9" class="nav-menu">
           <li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-8">
             <a href="/archive">日志</a>
+          </li>
+          <li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-post_format menu-item-8">
             <a href="/write-an-archive">Post!</a>
           </li>
         </ul>
       </aside>
-      <aside id="recent-posts-2" class="widget widget_recent_entries">
+      <aside id="recent-posts-2" class="widget widget_recent_entries hgroup">
         <h3 class="widget-title">近期文章</h3>
         <ul>
           {% for post in site.posts limit:5 %}
           <li>
-            <a href="{{ post.url | prepend:site.baseurl}}" class="post-title-archive">{{ post.title }}</a>
+            <a href="{{ post.url | prepend:site.baseurl}}" class="recent_entries">{{ post.title }}</a>
           </li>
           {% endfor %}
         </ul>
