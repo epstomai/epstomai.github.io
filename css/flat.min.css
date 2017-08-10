@@ -127,9 +127,8 @@ body {
 	float: left;
 }
 
-.btn.btn-primary.btn-block.btn-lg {
-	margin-left: 15px;
-	margin-right: 15px;
+.home-read-more {
+padding: 15px;
 }
 
 .post-header {
@@ -177,4 +176,8 @@ body {
 	color: #fff !important;
 	background-color: #4D4A4A !important;
 	padding: 30px 90px;
+}
+
+.meta-nav{
+	color: rgba(255,255,255,0.5);
 }

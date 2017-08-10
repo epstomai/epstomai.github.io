@@ -16,26 +16,22 @@ layout: default
 </div>
 {% if site.data.theme.show_post_navs %}
   {% if page.previous or page.next %}
-    <div class="post-navs row previous-post">
       {% if page.previous %}
-        <div class="col-md-12 post-nav">
-          <h3 class="section-header">
+        <div class="col-md-12">
+          <h3 class="meta-nav">
             上一
           </h3>
           <h2 class="post-title-link"><a href="{{ page.previous.url | prepend:site.baseurl }}">{{ page.previous.title }}</a></h2>
         </div>
       {% endif %}
-    </div>
     
-    <div class="post-navs row next-post">
       {% if page.next %}
-        <div class="col-md-12 post-nav">
-          <h3 class="section-header">
+        <div class="col-md-12">
+          <h3 class="meta-nav">
             继续
           </h3>
           <h2 class="post-title-link"><a href="{{ page.next.url | prepend:site.baseurl }}">{{ page.next.title }}</a></h2>
         </div>
       {% endif %}
-    </div>
   {% endif %}
 {% endif %}
