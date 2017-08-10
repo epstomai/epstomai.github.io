@@ -6,101 +6,115 @@
 	font-style: normal
 }
 
-body{
-	  background-image: url(http://ouf097a3f.bkt.clouddn.com/1501429709820_1920%5B1%5D.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+body {
+	background-image: url(http://ouf097a3f.bkt.clouddn.com/1501429709820_1920%5B1%5D.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 #secondary {
-    color: rgba(255,255,255,1) !important;
-    padding: 0 !important;
+	color: rgba(255, 255, 255, 1) !important;
+	padding: 0 !important;
 }
 
 #secondary .widget-title {
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    font-family: "Roboto Condensed";
-    font-size: 12px;
-    line-height: 20px;
-    margin: 0 0 10px;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.6);
+	font-family: "Roboto Condensed";
+	font-size: 12px;
+	line-height: 20px;
+	margin: 0 0 10px;
 }
 
-#secondary a{
+#secondary a {
 	text-decoration: none;
-	color: rgba(255,255,255,1) !important;
+	color: rgba(255, 255, 255, 1) !important;
 }
 
-#secondary a:hover{
+#secondary a:hover {
 	text-decoration: none;
-	color:#2a333e!important;
+	color: #2a333e!important;
 }
-#secondary,#main-sidebar{
-background-color: rgba(73, 113, 126, 1) !important;
+
+#secondary,
+#main-sidebar {
+	background-color: rgba(73, 113, 126, 1) !important;
 }
 
 #masthead .site-title {
-    font-family: "Amatic SC";
-    line-height: 50px;
-    font-size: 50px;
-    margin: 0;
-    padding: 30px 0;
-    text-align: center;
-    color: rgba(255,255,255,1)
+	font-family: "Amatic SC";
+	line-height: 50px;
+	font-size: 50px;
+	margin: 0;
+	padding: 30px 0;
+	text-align: center;
+	color: rgba(255, 255, 255, 1)
 }
 
 #masthead .site-description {
-    text-align: center;
-    text-transform: uppercase;
-    margin: -15px 0 30px;
-    line-height: 20px;
-    font-family: "Roboto Condensed";
-    font-size: 14px;
-    text-align: center;
-    color: rgba(255,255,255,0.6);
+	text-align: center;
+	text-transform: uppercase;
+	margin: -15px 0 30px;
+	line-height: 20px;
+	font-family: "Roboto Condensed";
+	font-size: 14px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .hgroup {
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.recent_entries{
+.recent_entries {
 	font-size: 14px;
 }
 
 #secondary .widget {
-    padding: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    font-size: 14px;
+	padding: 15px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	font-size: 14px;
 }
 
-#site-navigation{
-	padding-left: 30px;
+#site-navigation {
+	padding-left: 30px !important;
 }
 
-
-#primary{
-	padding: 44px :;px !important;
-	background-color: rgba(255,255,255,0.9)!important;
+#primary {
+	
+	background-color: rgba(255, 255, 255, 0.9)!important;
 }
 
-#primary a:hover{
+#primary a:hover {
 	text-decoration: none !important;
 }
 
+#primary .post-header-home {
+	border-bottom: 1px solid #F3F3F3;
+	padding: 0px 0px 10px 0px;
+}
+#primary .article {
+	padding: 44px 40px !important;
+	border-bottom: 1px solid #eee;
+}
+
 .btn {
-    outline: none !important;
+	outline: none !important;
 }
-.btn-sm, .btn-group-sm>.btn {
-    padding: 5px 10px;
-    font-size: 12px;
-    line-height: 1.5;
-    border-radius: 2px;
+
+.btn-sm,
+.btn-group-sm>.btn {
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 2px;
 }
+
 .btn-default {
-    color: #fff;
-    background-color: #34495e;
-    border-color: #34495e;
+	color: #fff;
+	background-color: #34495e;
+	border-color: #34495e;
+	float: left;
 }
