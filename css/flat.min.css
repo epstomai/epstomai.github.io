@@ -6,7 +6,6 @@
 	font-style: normal
 }
 
-
 body {
 	background-image: url(http://ouf097a3f.bkt.clouddn.com/1501429709820_1920%5B1%5D.jpg);
 	background-position: center center;
@@ -130,7 +129,7 @@ body {
 }
 
 .home-read-more {
-padding: 15px;
+	padding: 15px;
 }
 
 .post-header {
@@ -172,97 +171,127 @@ padding: 15px;
 	background-color: #717577 !important;
 	padding: 30px 90px;
 }
-.post-title-link{
+
+.post-title-link {
 	color: #fff !important;
 	font-size: 34px;
 }
+
 .next-post {
 	background-color: #4D4A4A !important;
 	padding: 30px 90px;
 }
 
-.meta-nav{
-	color: rgba(255,255,255,0.5);
+.meta-nav {
+	color: rgba(255, 255, 255, 0.5);
 	margin-top: 0px !important;
 	margin-bottom: 5px;
 }
 
 
 /* Mobile */
+
 @media only screen and (max-width: 767px) {
-  [class*="mobile hidden"],
-  [class*="tablet only"]:not(.mobile),
-  [class*="computer only"]:not(.mobile),
-  [class*="large screen only"]:not(.mobile),
-  [class*="widescreen only"]:not(.mobile),
-  [class*="or lower hidden"] {
-    display: none !important;
-  }
+	[class*="mobile hidden"],
+	[class*="tablet only"]:not(.mobile),
+	[class*="computer only"]:not(.mobile),
+	[class*="large screen only"]:not(.mobile),
+	[class*="widescreen only"]:not(.mobile),
+	[class*="or lower hidden"] {
+		display: none !important;
+	}
 }
+
 
 /* Tablet / iPad Portrait */
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  [class*="mobile only"]:not(.tablet),
-  [class*="tablet hidden"],
-  [class*="computer only"]:not(.tablet),
-  [class*="large screen only"]:not(.tablet),
-  [class*="widescreen only"]:not(.tablet),
-  [class*="or lower hidden"]:not(.mobile) {
-    display: none !important;
-  }
+	[class*="mobile only"]:not(.tablet),
+	[class*="tablet hidden"],
+	[class*="computer only"]:not(.tablet),
+	[class*="large screen only"]:not(.tablet),
+	[class*="widescreen only"]:not(.tablet),
+	[class*="or lower hidden"]:not(.mobile) {
+		display: none !important;
+	}
 }
+
 
 /* Computer / Desktop / iPad Landscape */
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  [class*="mobile only"]:not(.computer),
-  [class*="tablet only"]:not(.computer),
-  [class*="computer hidden"],
-  [class*="large screen only"]:not(.computer),
-  [class*="widescreen only"]:not(.computer),
-  [class*="or lower hidden"]:not(.tablet):not(.mobile) {
-    display: none !important;
-  }
+	[class*="mobile only"]:not(.computer),
+	[class*="tablet only"]:not(.computer),
+	[class*="computer hidden"],
+	[class*="large screen only"]:not(.computer),
+	[class*="widescreen only"]:not(.computer),
+	[class*="or lower hidden"]:not(.tablet):not(.mobile) {
+		display: none !important;
+	}
 }
+
 
 /* Large Monitor */
+
 @media only screen and (min-width: 1200px) and (max-width: 1919px) {
-  [class*="mobile only"]:not([class*="large screen"]),
-  [class*="tablet only"]:not([class*="large screen"]),
-  [class*="computer only"]:not([class*="large screen"]),
-  [class*="large screen hidden"],
-  [class*="widescreen only"]:not([class*="large screen"]),
-  [class*="or lower hidden"]:not(.computer):not(.tablet):not(.mobile) {
-    display: none !important;
-  }
+	[class*="mobile only"]:not([class*="large screen"]),
+	[class*="tablet only"]:not([class*="large screen"]),
+	[class*="computer only"]:not([class*="large screen"]),
+	[class*="large screen hidden"],
+	[class*="widescreen only"]:not([class*="large screen"]),
+	[class*="or lower hidden"]:not(.computer):not(.tablet):not(.mobile) {
+		display: none !important;
+	}
 }
+
 
 /* Widescreen Monitor */
+
 @media only screen and (min-width: 1920px) {
-  [class*="mobile only"]:not([class*="widescreen"]),
-  [class*="tablet only"]:not([class*="widescreen"]),
-  [class*="computer only"]:not([class*="widescreen"]),
-  [class*="large screen only"]:not([class*="widescreen"]),
-  [class*="widescreen hidden"],
-  [class*="widescreen or lower hidden"] {
-    display: none !important;
-  }
+	[class*="mobile only"]:not([class*="widescreen"]),
+	[class*="tablet only"]:not([class*="widescreen"]),
+	[class*="computer only"]:not([class*="widescreen"]),
+	[class*="large screen only"]:not([class*="widescreen"]),
+	[class*="widescreen hidden"],
+	[class*="widescreen or lower hidden"] {
+		display: none !important;
+	}
 }
+
+
+/* Mobile View */
 
 @media only screen and (max-width: 767px) {
-  #secondary {
-    display: none !important;
-  }
-  #top-navbar{
-  	display: block !important;
-  }
+	#secondary {
+		display: none !important;
+	}
+	#top-navbar {
+		display: block !important;
+		visibility: visible !important;
+	}
+	body {
+		padding-top: 0px;
+	}
+	#primary {
+		margin-top: -48px;
+	}
 }
+
+
+/* PC View */
 
 @media only screen and (min-width: 1920px) {
-  #secondary {
-    display: block !important;
-  }
-  #top-navbar{
-  	display: none !important;
-  }
+	#secondary {
+		display: block !important;
+	}
+	#top-navbar {
+		display: none !important;
+		visibility: hidden !important;
+	}
+	body {
+		padding-top: 15px;
+	}
+	#primary {
+		margin-top: 0px;
+	}
 }
-
