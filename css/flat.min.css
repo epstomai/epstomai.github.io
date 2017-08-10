@@ -83,8 +83,10 @@ body {
 }
 
 #primary {
-	
+	font-family: Roboto;
 	background-color: rgba(255, 255, 255, 0.9)!important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
 }
 
 #primary a:hover {
@@ -92,18 +94,19 @@ body {
 }
 
 #primary .post-header-home {
-	border-bottom: rgba(221, 221, 221, 0.6);
+	border-bottom: solid 1px rgba(221, 221, 221, 0.6);
 	margin-bottom: 15px;
+	font-weight: 500;
+  font-size: 40px;
 }
 #primary .article {
 	padding: 44px 40px !important;
-	border-bottom: rgba(221, 221, 221, 0.6);
+	border-bottom: solid 1px rgba(221, 221, 221, 0.6);
 }
 
 .btn {
 	outline: none !important;
 }
-
 .btn-sm,
 .btn-group-sm>.btn {
 	padding: 5px 10px;
@@ -111,7 +114,6 @@ body {
 	line-height: 1.5;
 	border-radius: 2px;
 }
-
 .btn-default {
 	color: #fff;
 	background-color: #34495e;
@@ -119,12 +121,17 @@ body {
 	float: left;
 }
 
+.btn.btn-primary.btn-block.btn-lg{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
 .post-header{
-	border-bottom: rgba(221, 221, 221, 0.6);
+	border-bottom: solid 1px  rgba(221, 221, 221, 0.6);
 	padding: 0px 0px 10px 0px;
 }
 .post-footer{
-	border-top: rgba(221, 221, 221, 0.6) !important;
+	border-top: solid 1px rgba(221, 221, 221, 0.6) !important;
 	margin-bottom: 0px !important;
 }
 .post-title-main{
@@ -139,5 +146,5 @@ body {
 }
 
 .default-footer{
-	color: rgba(255, 255, 255, 1) !important;
+	/*color: rgba(255, 255, 255, 1) !important;*/
 }
