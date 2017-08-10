@@ -7,7 +7,7 @@
 }
 
 #secondary {
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,1) !important;
 }
 
 #secondary .widget-title {
@@ -17,6 +17,11 @@
     font-size: 12px;
     line-height: 20px;
     margin: 0 0 10px;
+}
+
+#secondary a{
+	text-decoration: none;
+	color: rgba(255,255,255,1) !important;
 }
 
 #secondary a:hover{
@@ -54,4 +59,15 @@ background-color: rgba(73, 113, 126, 1) !important;
 
 .recent_entries{
 	font-size: 14px;
+}
+
+#secondary .widget {
+    padding: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+}
+
+
+#primary{
+	padding: 60px 35px !important;
 }
