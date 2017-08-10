@@ -12,27 +12,26 @@ layout: default
 <div class="post-footer">
   {% include post-footer.html %}
 </div>
+
+</div>
 {% if site.data.theme.show_post_navs %}
   {% if page.previous or page.next %}
-    <div class="post-navs row">
+    <div class="post-navs row previous-post">
       {% if page.previous %}
-        <div class="col-md-6 post-nav">
+        <div class="col-md-12 post-nav">
           <h3 class="section-header">
-            更早
-            <span class="text-muted"> &middot; </span>
-            <a href="{{ "/archive" | prepend:site.baseurl }}">浏览日志 ({{ site.posts.size }})</a>
+            上一
           </h3>
           <h2 class="post-title-link"><a href="{{ page.previous.url | prepend:site.baseurl }}">{{ page.previous.title }}</a></h2>
         </div>
       {% endif %}
+    </div>
+    
+    <div class="post-navs row next-post">
       {% if page.next %}
-        <div class="col-md-6 post-nav">
+        <div class="col-md-12 post-nav">
           <h3 class="section-header">
-            更晚
-            {% unless page.previous %}
-              <span class="text-muted"> &middot; </span>
-              <a href="{{ "/archive" | prepend:site.baseurl }}">浏览全部日志 ({{ site.posts.size }})</a>
-            {% endunless %}
+            继续
           </h3>
           <h2 class="post-title-link"><a href="{{ page.next.url | prepend:site.baseurl }}">{{ page.next.title }}</a></h2>
         </div>
@@ -40,4 +39,3 @@ layout: default
     </div>
   {% endif %}
 {% endif %}
-</div>
