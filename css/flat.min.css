@@ -189,6 +189,18 @@ body {
 }
 
 
+/* CSS for archive list page */
+.page-archive{
+	padding: 44px 40px !important;
+}
+.page-archive .section-header-archive{
+	font-size: 24px !important;
+}
+.page-archive p a{
+	color: rgb(71, 102, 112) !important;
+	font-size: 20px !important;
+}
+
 /* Mobile */
 
 @media only screen and (max-width: 767px) {
