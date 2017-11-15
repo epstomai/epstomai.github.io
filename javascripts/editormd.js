@@ -2857,7 +2857,7 @@
             	pixel = currentPix + 30;
             }
 
-            cm.replaceSelection("<p style='padding-left: " + pixel*count +  "px;'>" + selection + "</p>");
+            cm.replaceSelection("<p style='padding-left: " + pixel +  "px;'>" + selection + "</p>");
 
             if(selection === "") {
                 cm.setCursor(cursor.line, cursor.ch + 2);
