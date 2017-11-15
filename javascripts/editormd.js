@@ -2851,8 +2851,8 @@
             var selection = cm.getSelection();
             var pixel =  30;
             if (selection.indexOf('padding-left')!==-1) {
-            	var start = selection.indexOf('padding-left:')+14;
-            	var end = selection.indexOf('px;');
+            	var start = selection.indexOf('padding-left:')+15;
+            	var end = selection.indexOf('px;')+1;
             	alert(start+" "+end+" "+selection);
             	var currentPixStr = selection.substring(start,stop);
             	alert(currentPixStr);
