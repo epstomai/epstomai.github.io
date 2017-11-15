@@ -2853,14 +2853,21 @@
             if (selection.indexOf('padding-left')!==-1) {
             	var start = selection.indexOf('padding-left:')+14;
             	var end = selection.indexOf('px;');
-            	var currentPix = selection.toString().substring(start,stop).trim().parseInt();
+            	alert(start+" "+end+" "+selection);
+            	var currentPix = selection.substring(start,stop).parseInt();
+            	alert(currentPix);
+            	
             	pixel = currentPix + 30;
+            	selection.replace(currentPix+"px",pixel+"px");
+            	
+            }else{
+            	cm.replaceSelection("<p style='padding-left: " + pixel +  "px;'>" + selection + "</p>");
             }
 
-            cm.replaceSelection("<p style='padding-left: " + pixel +  "px;'>" + selection + "</p>");
+//          cm.replaceSelection("<p style='padding-left: " + pixel +  "px;'>" + selection + "</p>");
 
             if(selection === "") {
-                cm.setCursor(cursor.line, cursor.ch + 2);
+                cm.setCursor(cursor.line, cursor.ch + 14);
             }
         },
 
