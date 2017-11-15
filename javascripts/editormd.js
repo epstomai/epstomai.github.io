@@ -2853,7 +2853,7 @@
             if (selection.indexOf('padding-left')!==-1) {
             	var start = selection.indexOf('padding-left:')+14;
             	var end = selection.indexOf('px;');
-            	var currentPix = selection.substring(start,stop).trim().parseInt();
+            	var currentPix = selection.toString().substring(start,stop).trim().parseInt();
             	pixel = currentPix + 30;
             }
 
