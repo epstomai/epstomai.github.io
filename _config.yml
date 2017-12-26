@@ -7,7 +7,7 @@ title: "广重36号 ~ 窗外的风景色"
 
 gems:
   - jemoji
-  - jekyll-paginate
+gems: [jekyll-paginate]
 exclude:
   - "README.md"
   - "CHANGELOG.md"

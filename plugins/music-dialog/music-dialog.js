@@ -93,17 +93,17 @@
                             }
                             /* 插入APlayer代码 */
                             var insertHTML = "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.6.0/APlayer.min.js\"></script>"+
-												"<div id=\"aplayer1\" class=\"aplayer\"></div>											   "+
-												"<script>																				   "+
-												"var ap = new APlayer({																	   "+
-												"    element: document.getElementById('aplayer1'),										   "+
-												"    music: {																			   "+
-												"        title: '"+title+"',															   "+
-												"        author: '"+author+"',															   "+
-												"        url: '"+url+"',								   								   "+
-												"        pic: '"+pic+"'									   								   "+
-												"    }																					   "+
-												"});																					   "+
+												"<div id=\"aplayer1\" class=\"aplayer\"></div>"+
+												"<script>"+
+												"var ap = new APlayer({"+
+												"    element: document.getElementById('aplayer1'),"+
+												"    music: {"+
+												"        title: '"+title+"',"+
+												"        author: '"+author+"',"+
+												"        url: '"+url+"',"+
+												"        pic: '"+pic+"'"+
+												"    }"+
+												"});"+
 												"</script>";
                             
                             cm.replaceSelection(insertHTML);
