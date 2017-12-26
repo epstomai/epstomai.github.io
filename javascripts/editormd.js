@@ -313,8 +313,10 @@
                     author        : "音乐作者",
                     pic           : "封面图片地址",
                     url           : "音乐外链地址",
-                    imageURLEmpty    : "错误：图片地址不能为空。",
-                    musicURLEmpty    : "错误：音乐地址不能为空。"
+                    picURLEmpty    : "错误：图片地址不能为空。",
+                    titleEmpty    : "错误：音乐标题不能为空。"
+                    authorEmpty    : "错误：音乐作者不能为空。"
+                    urlEmpty    : "错误：音乐地址不能为空。"
                 },
                 preformattedText : {
                     title             : "添加预格式文本或代码块", 
