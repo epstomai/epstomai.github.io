@@ -27,15 +27,15 @@ title: 日志
 	
 	<!-- 生成中间页 -->
 	{% for page in (1..paginator.total_pages) %}
-		<!-- 当前页：不可选 激活 -->
 	    {% if page == paginator.page %}
+		<!-- 当前页：不可选 激活 -->
 	      <a class="pager btn btn-default btn-sm active disabled">{{ page }}</a>
-	    <!-- 第一页：跳转日志首页 -->
 	    {% elsif page == 1 %}
+	    <!-- 第一页：跳转日志首页 -->
 	      <a class="pager btn btn-default btn-sm" href="{{ 'index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-	    <!-- 其他页 -->
 	    {% else %}
-	      <a class="pager btn btn-default btn-sm" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+	    <!-- 其他页 -->
+	      <a class="pager btn btn-default btn-sm" href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
 	    {% endif %}
 	{% endfor %}
 	
