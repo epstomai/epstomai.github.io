@@ -106,7 +106,7 @@
 												"});																					   "+
 												"</script>";
                             
-                            cm.replaceSelection(str);
+                            cm.replaceSelection(insertHTML);
 
                             this.hide().lockScreen(false).hideMask();
 
