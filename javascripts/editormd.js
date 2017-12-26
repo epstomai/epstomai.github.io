@@ -2853,19 +2853,13 @@
             if (selection.indexOf('padding-left')!==-1) {
             	var start = selection.indexOf('padding-left:')+15;
             	var end = selection.indexOf('px;')+1;
-            	alert(start+" "+end+" "+selection);
-            	var currentPixStr = selection.substring(start,stop);
-            	alert(currentPixStr);
+            	var currentPixStr = selection.substring(start,end);
             	var currentPix = parseInt(currentPixStr);
             	pixel = currentPix + 30;
             	selection.replace(currentPix+"px",pixel+"px");
-            	
             }else{
             	cm.replaceSelection("<p style='padding-left: " + pixel +  "px;'>" + selection + "</p>");
             }
-
-//          cm.replaceSelection("<p style='padding-left: " + pixel +  "px;'>" + selection + "</p>");
-
             if(selection === "") {
                 cm.setCursor(cursor.line, cursor.ch + 14);
             }
