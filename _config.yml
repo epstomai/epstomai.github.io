@@ -1,5 +1,5 @@
-baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
-url: "http://epstomai.github.io" # the base hostname & protocol for your site
+baseurl: "https://epstomai.github.io/" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "https://epstomai.github.io" # the base hostname & protocol for your site
 title: "广重36号 ~ 窗外的风景色"
 
 # This is used by feed.xml. Uncomment if you want to use it.
@@ -33,4 +33,4 @@ defaults:
 theme: jekyll-theme-cayman
 paginate: 15
 paginate_path: "archive/page:num"
-truePagerPath: "page:num"
+achive_path: "https://epstomai.github.io/archive/"
