@@ -2851,12 +2851,14 @@
             var selection = cm.getSelection();
             var pixel =  30;
             if (selection.indexOf('padding-left')!==-1) {
-            	var start = selection.indexOf('padding-left:')+15;
-            	var end = selection.indexOf('px;')+1;
+            	var start = selection.indexOf('padding-left:')+14;
+            	var end = selection.indexOf('px;');
             	var currentPixStr = selection.substring(start,end);
+            	alert(currentPixStr);
             	var currentPix = parseInt(currentPixStr);
             	pixel = currentPix + 30;
-            	selection.replace(currentPix+"px",pixel+"px");
+            	var newReplacement = selection.replace(currentPixStr+"px", pixel+"px");
+            	cm.replaceSelection(newReplacement);
             }else{
             	cm.replaceSelection("<p style='padding-left: " + pixel +  "px;'>" + selection + "</p>");
             }
