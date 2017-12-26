@@ -30,3 +30,5 @@ defaults:
       layout: "post"
 
 theme: jekyll-theme-cayman
+paginate: 20
+paginate_path: "archive/page:num"

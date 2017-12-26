@@ -1,9 +1,9 @@
 ---
-title: Archive
+title: 日志
 permalink: "archive/index.html"
 ---
 <div class="page-archive">
-{% for post in site.posts %}
+{% for post in paginator.posts %}
   {% assign post_month_year = post.date | date: "%B %Y" %}
   {% assign newer_post_month_year = post.next.date | date: "%B %Y" %}
   {% if post_month_year != newer_post_month_year %}
@@ -16,4 +16,33 @@ permalink: "archive/index.html"
     <small class="text-muted">{{ post.date | date_to_string }}</small>
   </p>
 {% endfor %}
+
+<!-- 分页代码 -->
+{% if paginator.total_pages > 1 %}
+
+	<!-- 检测是否生成上一页 -->
+	{% if paginator.previous_page %}
+	    <a href="archive/{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"上一页</a>
+	{% endif %}
+	
+	<!-- 生成中间页 -->
+	{% for page in (1..paginator.total_pages) %}
+			<!-- 当前页：不可选 激活 -->
+	    {% if page == paginator.page %}
+	      <a class="btn btn-default btn-sm active disabled">{{ page }}</a>
+	    <!-- 第一页：跳转日志首页 -->
+	    {% elsif page == 1 %}
+	      <a href="{{ 'archive/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+	    <!-- 其他页 -->
+	    {% else %}
+	      <a class="btn btn-default btn-sm" href="archive/{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+	    {% endif %}
+	{% endfor %}
+	
+	<!-- 检测是否生成下一页 -->
+	{% if paginator.next_page %}
+	    <a href="archive/{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+	{% endif %}
+
+{% endif %}
 </div>

@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">升级不安全的请求，并不能用-->
     <link rel="stylesheet" href="{{ " /stylesheets/shiori.css " | prepend:site.baseurl }}">
     <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -25,6 +24,8 @@
   <body>
     {% if site.data.theme.color == "default" %}
     <div id="top-navbar" class="navbar navbar-default navbar-static-top hidden">
+    	{% elseif page.title == '撰写新文章' %}
+      <div id="top-navbar" class="navbar navbar-inverse navbar-static-top">
       {% else %}
       <div id="top-navbar" class="navbar navbar-inverse navbar-static-top hidden">
         {% endif %}

@@ -2854,7 +2854,6 @@
             	var start = selection.indexOf('padding-left:')+14;
             	var end = selection.indexOf('px;');
             	var currentPixStr = selection.substring(start,end);
-            	alert(currentPixStr);
             	var currentPix = parseInt(currentPixStr);
             	pixel = currentPix + 30;
             	var newReplacement = selection.replace(currentPixStr+"px", pixel+"px");
