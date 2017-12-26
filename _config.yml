@@ -36,4 +36,4 @@ theme: jekyll-theme-cayman
 paginate: 15
 paginate_path: "archive/page:num"
 achive_path: "https://epstomai.github.io/archive/"
-cur_page: "page:num"
+cur_page: "https://epstomai.github.io/archive/page"
