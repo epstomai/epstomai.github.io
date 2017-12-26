@@ -35,7 +35,7 @@ title: 日志
 	      <a class="pager btn btn-default btn-sm" href="{{ 'index.html' | prepend: site.achive_path | replace: '//', '/' }}">{{ page }}</a>
 	    {% else %}
 	    <!-- 其他页 -->
-	      <a class="pager btn btn-default btn-sm" href="{{ 'page' | prepend: site.achive_path | apend: page | replace: '//', '/' }}">{{ page }}</a>
+	      <a class="pager btn btn-default btn-sm" href="{{ 'page' | prepend: site.achive_path | append: page | replace: '//', '/' }}">{{ page }}</a>
 	    {% endif %}
 	{% endfor %}
 	
