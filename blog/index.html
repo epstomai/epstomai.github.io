@@ -28,12 +28,12 @@ permalink: "blog/index.html"
 	
 	<!-- 生成中间页 -->
 	{% for page in (1..paginator.total_pages) %}
-			<!-- 当前页：不可选 激活 -->
+		<!-- 当前页：不可选 激活 -->
 	    {% if page == paginator.page %}
 	      <a class="btn btn-default btn-sm active disabled">{{ page }}</a>
 	    <!-- 第一页：跳转日志首页 -->
 	    {% elsif page == 1 %}
-	      <a href="{{ 'index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+	      <a class="btn btn-default btn-sm" href="{{ 'index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
 	    <!-- 其他页 -->
 	    {% else %}
 	      <a class="btn btn-default btn-sm" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
