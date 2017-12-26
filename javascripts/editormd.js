@@ -3146,7 +3146,7 @@
         },
         
         music : function() {
-            this.executePlugin("musicDialog", "musice-dialog/music-dialog");
+            this.executePlugin("musicDialog", "music-dialog/music-dialog");
         },
         
         code : function() {

@@ -3,6 +3,10 @@ title: 日志
 permalink: "archive/index.html"
 ---
 <div class="page-archive">
+	{% if paginator.total_posts == 0 %}
+	<h2>ERROR</h2>
+	{% endif %}
+	
 {% for post in paginator.posts %}
   {% assign post_month_year = post.date | date: "%B %Y" %}
   {% assign newer_post_month_year = post.next.date | date: "%B %Y" %}
