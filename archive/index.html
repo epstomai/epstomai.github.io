@@ -35,11 +35,7 @@ title: 日志
 	      <a class="pager btn btn-default btn-sm" href="{{ 'index.html' | prepend: site.achive_path | replace: '//', '/' }}">{{ page }}</a>
 	    {% else %}
 	    <!-- 其他页 -->
-<<<<<<< HEAD
-	      <a class="pager btn btn-default btn-sm" href="{{ 'page' | append: page | replace: '//', '/' }}">{{ page }}</a>
-=======
-	      <a class="pager btn btn-default btn-sm" href="{{ site.cur_page | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
->>>>>>> parent of 4b2d664... fix bug
+	      <a class="pager btn btn-default btn-sm" href="{{ 'page' | prepend: site.achive_path | apend: page | replace: '//', '/' }}">{{ page }}</a>
 	    {% endif %}
 	{% endfor %}
 	
