@@ -28,7 +28,7 @@ permalink: "archive/index.html"
 
 	<!-- 检测是否生成上一页 -->
 	{% if paginator.previous_page %}
-	    <a href="archive/{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"上一页</a>
+	    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
 	{% endif %}
 	
 	<!-- 生成中间页 -->
@@ -38,16 +38,16 @@ permalink: "archive/index.html"
 	      <a class="btn btn-default btn-sm active disabled">{{ page }}</a>
 	    <!-- 第一页：跳转日志首页 -->
 	    {% elsif page == 1 %}
-	      <a href="{{ 'archive/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+	      <a href="{{ 'index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
 	    <!-- 其他页 -->
 	    {% else %}
-	      <a class="btn btn-default btn-sm" href="archive/{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+	      <a class="btn btn-default btn-sm" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
 	    {% endif %}
 	{% endfor %}
 	
 	<!-- 检测是否生成下一页 -->
 	{% if paginator.next_page %}
-	    <a href="archive/{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
+	    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
 	{% endif %}
 
 {% endif %}

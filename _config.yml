@@ -31,4 +31,4 @@ defaults:
 
 theme: jekyll-theme-cayman
 paginate: 20
-paginate_path: "archive/page:num"
+paginate_path: "page:num"
