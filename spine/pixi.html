@@ -16,30 +16,6 @@
 </div>
 <script>
 
-    function init(val){
-        const renderer = new PIXI.CanvasRenderer(300, 200,{transparent:true,resolution:1});
-        document.body.appendChild(renderer.view);
-        var stage = new PIXI.Container();
-        PIXI.loader
-            .load(onAssetsLoaded);
-        function onAssetsLoaded (loader, resources) {
-            const animation = new PIXI.spine.Spine(resources.spineCharacter.spineData);
-                        
-            animation.state.addAnimationByName(0, val, true, 0);
-            animation.x = 140;
-            animation.y = 180;
-            animation.scale.x = 1;
-            animation.scale.y = 1;
-            stage.addChild(animation);
-            animate();
-
-            function animate() {
-                requestAnimationFrame(animate);
-                renderer.render(stage);
-            }
-        }
-    }
-
     $(function(){
         const renderer = new PIXI.CanvasRenderer(300, 200,{transparent:true,resolution:1});
         document.body.appendChild(renderer.view);
