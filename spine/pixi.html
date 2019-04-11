@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>spine-js</title>
+    <script src="js/pixi/pixi.js"></script>
+    <script src="js/pixi/pixi-spine.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <style type="text/css">
+        canvas{
+            zoom:55%;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+</div>
+<script>
+
+    function init(val){
+        const renderer = new PIXI.CanvasRenderer(300, 200,{transparent:true,resolution:1});
+        document.body.appendChild(renderer.view);
+        var stage = new PIXI.Container();
+        PIXI.loader
+            .load(onAssetsLoaded);
+        function onAssetsLoaded (loader, resources) {
+            const animation = new PIXI.spine.Spine(resources.spineCharacter.spineData);
+                        
+            animation.state.addAnimationByName(0, val, true, 0);
+            animation.x = 140;
+            animation.y = 180;
+            animation.scale.x = 1;
+            animation.scale.y = 1;
+            stage.addChild(animation);
+            animate();
+
+            function animate() {
+                requestAnimationFrame(animate);
+                renderer.render(stage);
+            }
+        }
+    }
+
+    $(function(){
+        const renderer = new PIXI.CanvasRenderer(300, 200,{transparent:true,resolution:1});
+        document.body.appendChild(renderer.view);
+        var stage = new PIXI.Container();
+        PIXI.loader
+            .add('spineCharacter', 'data/charlotte.json')
+            .load(onAssetsLoaded);
+        function onAssetsLoaded (loader, resources) {
+            const animation = new PIXI.spine.Spine(resources.spineCharacter.spineData);
+            animation.position.x = renderer.width / 2;
+            animation.position.y = renderer.height - 20;
+
+            animation.scale.set(1);
+
+            animation.stateData.setMixByName('standby', 'run', 0.2);
+            animation.stateData.setMixByName('run', 'standby', 0.2);
+
+            animation.state.setAnimationByName(0, 'standby', true);
+            
+            stage.addChild(animation);
+
+            $("input[type='radio']").on("click",function(){
+                console.log(this.value);
+                animation.state.setAnimationByName(0, this.value, true, 0);
+             });
+
+        }
+        requestAnimationFrame(animate);
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(stage);
+        }
+
+        var radio = document.getElementById("standby").checked = 1;
+        
+    });
+    
+</script>
+<div id="inputs">
+    <div style="display: inline; padding-left: 10px; padding-right: 10px;">
+        <input id="standby" type="radio" name="anim" value="standby" checked="checked">待机
+    </div>
+    <div style="display: inline; padding-left: 10px; padding-right: 10px;">
+        <input id="run" type="radio" name="anim" value="run">奔跑
+    </div>
+</div>
+</body>
+</html>
