@@ -218,7 +218,7 @@ function setSelectedStyle(genre) {
 	var bgImage = new Image();
 	bgImage.style.width = "100%";
 	bgImage.style.height = "100%";
-	bgImage.src = "img/" + genre.id + ".jpg";
+	bgImage.src = "./spine-js_files/" + genre.id + ".jpg";
 	bgImage.className = "fill";
 	this.bg.appendChild(bgImage);
 
