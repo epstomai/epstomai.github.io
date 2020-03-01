@@ -1,0 +1,31 @@
+a.ui.logo.icon {
+	margin-right: 1em;
+}
+
+.article p {
+	text-indent: 2em;
+}
+
+.article h2 {
+	text-indent: 1.2em;
+}
+
+span.red{
+	color: #AC0013;
+}
+
+span.orange{
+	color: #E55B00;
+}
+span.purple{
+	color: #7D64FF;
+}
+span.blue{
+	color: #1678C2;
+}
+span.gray{
+	color: #573A08;
+}
+span.green{
+	color: darkolivegreen;
+}

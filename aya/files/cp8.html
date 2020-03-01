@@ -1,0 +1,35 @@
+<script>
+  $(function(){
+    
+    $(".cp8_content").load("files/cp8-1.html");
+    
+    $(".cp8_btn1").click(function(){
+      $(".cp_content").load("files/cp8-1.html");
+    });
+    $(".cp8_btn2").click(function(){
+      $(".cp8_content").load("files/cp8-2.html");
+    });
+    $(".cp8_btn3").click(function(){
+      $(".cp8_content").load("files/cp8-3.html");
+    });
+  })
+</script>
+<div class="ui masthead vertical segment">
+  <div class="ui container">
+    <div class="introduction">
+      <h1 class="ui header">空压教学</h1>
+    </div>
+  </div>
+</div>
+
+<div class="main ui intro container">
+  
+  <div class="ui buttons">
+      <button class="ui button cp8_btn1">基本理论</button>
+      <button class="ui button cp8_btn2">两个套路</button>
+      <button class="ui button cp8_btn3">地面实战压制转空压（抓DD）</button>
+  </div>
+    
+    <div class="cp8_content"></div>
+
+</div>
